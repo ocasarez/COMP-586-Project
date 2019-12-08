@@ -1,0 +1,16 @@
+<h1>Revoke Author Access</h1>
+<form [formGroup]="form" (ngSubmit)="revokeAccess()" #formDir="ngForm" novalidate>
+    <div>
+      <label>Author Id</label>
+      <div >
+        <input type="text" formControlName="removeAuthorId">
+      </div>
+      <label>Email</label>
+      <div >
+        <input type="text" formControlName="username" placeholder="email@example.com">
+      </div>
+    </div>
+    <div>
+      <button mat-raised-button type="submit" color="warn">Revoke Access</button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+<h1>Blogs Posts</h1>
+<p *ngIf="!(blogPosts$ | async)"><em>Loading...</em></p>
+<p>
+    <button *ngIf="isAuthor" mat-raised-button color="primary" [routerLink]="['/add']">New post</button>
+</p>
+<table *ngIf="(blogPosts$ | async)?.length>0">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Creator</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let blogPost of (blogPosts$ | async)">
+        <td><a [routerLink]="['/blogpost/', blogPost.id]">{{ blogPost.title }}</a></td>
+        <td>{{ blogPost.username }}</td>
+        <td>{{ blogPost.timeStamp }}</td>
+        <td *ngIf="isModerator"><button mat-raised-button color ="warn" [routerLink]="" (click)="deleteBlog(blogPost.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

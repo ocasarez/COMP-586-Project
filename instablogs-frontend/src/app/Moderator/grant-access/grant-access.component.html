@@ -1,0 +1,24 @@
+<h1>Grant Author Access</h1>
+<form [formGroup]="accessForm" (ngSubmit)="grantAccess()" #formDir="ngForm" novalidate>
+    <div>
+      <label>Viewer Id</label>
+      <div>
+        <input type="text" formControlName="addViewerId">
+      </div>
+      <label>Username</label>
+      <div>
+        <input type="text" formControlName="username" placeholder="email@example.com">
+      </div>
+      <label>First Name</label>
+      <div>
+        <input type="text" formControlName="firstname" placeholder="John">
+      </div>
+      <label>Last Name</label>
+      <div>
+        <input type="text" formControlName="lastname" placeholder="Doe">
+      </div>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" type="submit">Grant Access</button>
+    </div>
+</form>

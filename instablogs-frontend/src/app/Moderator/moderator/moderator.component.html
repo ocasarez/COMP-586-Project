@@ -1,0 +1,7 @@
+<h1>Moderator Dashboard</h1>
+<app-viewers-list></app-viewers-list>
+<app-authors-list></app-authors-list>
+<div *ngIf="isModerator">
+    <app-grant-access></app-grant-access>
+    <app-revoke-access></app-revoke-access>
+</div>

@@ -1,0 +1,25 @@
+<h1>{{actionType}} blog post</h1>
+<form [formGroup]="form" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+  <div>
+    <label>Title</label>
+    <div>
+      <input type="text" formControlName="title">
+    </div>
+    <span *ngIf="title.invalid && formDir.submitted">
+      Title is required.
+    </span>
+  </div>
+  <div>
+    <label for="Content">Body text</label>
+    <div >
+      <textarea rows="15" formControlName="content"></textarea>
+    </div>
+    <span *ngIf="content.invalid && formDir.submitted">
+      Body is required.
+    </span>
+  </div>
+  <div>
+    <button type="submit">Save</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+</form>
