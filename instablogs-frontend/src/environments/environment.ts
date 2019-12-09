@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  appUrl: 'https://localhost:44394/'
+  appUrl: 'https://instablogs20191208111010.azurewebsites.net/'
 };
 
 /*

@@ -36,7 +36,7 @@ export class NavToolbarComponent {
   }
   logout() {
     this.oktaAuth.logout('/');
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 
 }

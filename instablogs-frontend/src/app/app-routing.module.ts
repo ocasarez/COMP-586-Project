@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'blogpost/:id', component: BlogPostComponent, canActivate: [OktaAuthGuard], data: {onAuthRequired }},
   { path: 'add', component: BlogPostAddEditComponent, canActivate: [OktaAuthGuard], data: {onAuthRequired }},
-  { path: 'blogpost/edit/:id', component: BlogPostAddEditComponent, canActivate: [OktaAuthGuard], data: {onAuthRequired }},
   { path: 'login', component: LoginComponent},
   { path: 'implicit/callback', component: OktaCallbackComponent},
   { path: 'moderator', component: ModeratorComponent, canActivate: [OktaAuthGuard]}
